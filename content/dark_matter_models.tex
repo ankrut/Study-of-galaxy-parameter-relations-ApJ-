@@ -1,0 +1,73 @@
+\section{Dark matter models}
+\subsection{RAR}
+Following \citet{1992A&A...258..223I,2015MNRAS.451..622R}, a self-gravitating system composed of massive fermions in spherical symmetry is considered. We solve the Einstein equation for a thermal and semi-degenerate fermionic gas considered as a perfect fluid in hydrostatic equilibrium. No additional interaction is assumed for the fermions besides their fulfilling of quantum statistics and the relativistic gravitational equation. The static metric given in the standard form is \begin{equation}
+	\label{eqn:rel:metric}
+	g_{\mu\nu}=\diag(\e^{\nu(r)},-\e^{\lambda(r)},-r^2,-r^2\sin^2\vartheta)
+\end{equation} where $\nu(r)$ and $\lambda(r)$ depend only on the radial coordinate $r$. For this metric the circular velocity is simply given by \begin{equation}
+	\label{eqn:rel:velocity}
+	\frac{v^2(r)}{c^2} = \frac12 \diff{\nu}{\ln[r/R]}
+\end{equation} In next, we assume that the stress tensor is described by a perfect fluid in equilibrium. According to this TOV (Tolman-Oppenheimer-Volkoff) approach the metric potential $\nu(r)$ is described by the important relation\begin{equation}
+	\label{eqn:rel:solution-nu-A}
+	\diff{\nu}{r/R} = \DEFradius[-2] \qbracket{\DEFmass + \DEFradius[3]\DEFpressure} \qbracket[{\DEFradius[3]}]{1 - \DEFradius[-1]\DEFmass}^{-1}
+\end{equation} The enveloped mass within a given radius $r$, which we call hereafter simply the mass $M(r)$, is given by \begin{equation}
+	\label{eqn:rel:mass}
+	\diff{}{r/R} \DEFmass	= \DEFradius[2] \DEFdensity
+\end{equation} Further, mass density and pressure are represented in terms of statistical physics \citep{shapiro_black_2008}, \begin{align}
+	\DEFdensity		&= \frac{4}{\sqrt{\pi}} \int_1^\infty\epsilon^2 \sqrt{\epsilon^2 - 1} f(r,\epsilon) \d\epsilon\\
+	\DEFpressure	&= \frac{4}{3\sqrt{\pi}} \int_1^\infty (\epsilon^2 - 1)^{3/2} f(r,\epsilon) \d\epsilon
+\end{align} where $\epsilon^2 = 1 - p^2/mc^2$ describes the particle energy with rest mass (in units of $m c^2$) and $f(r,\epsilon)$ is a phase space distribution function. Here, we introduced the scaling factors $R,M$ and $\SCLdensity$ related by \begin{align}
+	\label{eqn:rel:radius-scale}
+	\frac{R}{l_\supPlanck} &= g^{-1/2} \pi^{1/4} \frac{m_\supPlanck^2}{m^2}\\
+	\label{eqn:rel:mass-scale}
+	\frac{M}{m_\supPlanck} &= \frac12 g^{-1/2} \pi^{1/4} \frac{m_\supPlanck^2}{m^2}\\
+	\frac{\SCLdensity}{\rho_\supPlanck} &= \frac18 g \pi^{-3/2} \frac{m^4}{m_\supPlanck^4}
+\end{align} with the Planck scales for mass ($m_\supPlanck$), length, ($l_\supPlanck$) and density ($\rho_\supPlanck = m_\supPlanck/l_\supPlanck^3$). For mass and length we may use the equivalent relation $2GM/R = c^2$ where $G$ is the gravitational constant and $c$ is the speed of light. $m$ is the particle mass and $g$ is the particle degeneracy. For fermions we have $g=2$.
+
+In order to solve the metric potential \eqref{eqn:rel:solution-nu-A} we consider the Fermi-Dirac distribution with cutoff, \begin{equation}
+	\label{eqn:king-df}
+	f(r,\epsilon) = \qbracket{1 - \e^{\qbracket{\epsilon - \varepsilon(r)}/\beta(r)}}\qbracket{\e^{\qbracket{\epsilon - \alpha(r)}/\beta(r)} + 1}^{-1}
+\end{equation} for $\epsilon \leq \varepsilon(r)$. Here, $\beta(r) = k_B T(r)/m c^2$ is the temperature parameter, $\alpha(r)$ describes the chemical potential (with rest mass) and $\varepsilon(r)$ we call the cutoff energy (with rest mass). All three parameters are related with the metric potential through the Tolman relation \citep{1930PhRv...36.1791T}, the Klein relation \citep{1949RvMP...21..531K} and the conservation of energy \citep{1989A&A...221....4M}. In detail, \begin{align}
+      \diff{\ln \beta(r)}{r/R}
+		= \diff{\ln \alpha(r)}{r/R}
+    = \diff{\ln \varepsilon(r)}{r/R}
+    = -\frac12 \diff{\nu}{r/R}
+\end{align} In next, it is convenient to introduce the degeneracy parameter $\theta(r)$ and the cutoff parameter $W(r)$ defined by \begin{align}
+	\theta(r)	&= \frac{\mu(r)}{k_B T(r)}\\
+	W(r) 			&= \frac{E_c(r)}{k_B T(r)}
+\end{align} where $E_c(r)$ is the classical particle escape energy \citep{1966AJ.....71...64K}.
+
+Chemical potential and cutoff energy become then $\alpha(r) = 1 + \beta(r) \theta(r)$ and $\varepsilon(r) = 1 + \beta(r) W(r)$. Here, $\mu(r)$ is the chemical potential (with rest mass subtracted), $T(r)$ is the temperature and $k_B$ is the Boltzmann constant.
+
+Note that a distribution function of the kind of \cref{eqn:king-df} can be obtained as a (quasi) stationary solution of a generalized Fokker-Planck equation for fermions including the physics of violent relaxation and evaporation, appropriate to treat non-linear galactic DM halo structure formation \citep{2004PhyA..332...89C}. 
+
+Finally, the metric potential is solved numerically with the initial condition \begin{equation}
+	M(0)			= 0,\quad
+	\beta(0)	= \beta_0,\quad
+	\theta(0)	= \theta_0,\quad
+	W(0)			= W_0
+\end{equation} Besides those configuration parameters ($\beta_0,\theta_0, W_0$) the RAR model is described also by the particle mass $m$, which is necessary to provide right physical properties for the obtained configurations. 
+
+
+\subsection{DC14}
+The DC14 model is given by a slightly modified Hernquist model which includes the influence of galaxy formation based on more profound baryonic feedback mechanism \citep{doi:10.1093/mnras/stu729,2016arXiv160505971K,1990ApJ...356..359H} \begin{equation}
+	\frac{\rho(r)}{\rho_\mathrm{N}} = \qbracket{\frac{r}{R_\mathrm{N}}}^{-\gamma}\qbracket{1 + \qbracket{\frac{r}{R_\mathrm{N}}}^\alpha}^{-\frac{\beta - \gamma}{\alpha}}
+\end{equation} The three parameters ($\alpha, \beta, \gamma$) are related through the stellar-to-dark matter ratio encoded via $X = \log_{10}(M^*/M_\mathrm{halo})$, \begin{align}
+	\alpha &= 2.94 - \log_{10}\qbracket{(10^{X + 2.33})^{-1.08} + (10^{X+2.33})^{2.29}}\\
+    \beta &= 4.23 + 1.34 X + 0.26 X^2\\
+    \gamma &= -0.06 - \log_{10}\qbracket{(10^{X + 2.56})^{-0.68} + 10^{X+2.56}}
+\end{align} The velocity is described by a hyper geometric function, \begin{equation}
+	\frac{v^2(r)}{\sigma_\mathrm{N}^2} = \frac{1}{3-\gamma} \qbracket{\frac{r}{R_\mathrm{N}}}^{3-\gamma} \pFq{2}{1}(p_1,p_2;\,q_1;\,-[r/R_\mathrm{N}]^\alpha)
+\end{equation} with \begin{align*}
+	p_1 &= (3-\gamma)/\alpha\\
+    p_2 &= (\beta-\gamma)/\alpha\\
+    q_1 &= 1 + (3 - \gamma)/\alpha
+\end{align*}
+
+\subsection{NFW}
+\noindent The NFW model is simply given by \citep{1996ApJ...462..563N} \begin{equation}
+	\frac{\rho(r)}{\rho_\mathrm{N}} = \qbracket{\frac{r}{R_\mathrm{N}}}^{-1}\qbracket{1 + \frac{r}{R_\mathrm{N}}}^{-2}
+\end{equation} with the circular velocity \begin{equation}
+	\frac{v^2(r)}{\sigma_\mathrm{N}^2} = \frac{\ln(1 + r/R_\mathrm{N})}{r/R_\mathrm{N}} - \frac{1}{1 + r/R_\mathrm{N}}
+\end{equation}\\
+
+\noindent Here, NFW and DC14 use the newtonian scaling factors: $R_\mathrm{N}$, $\rho_\mathrm{N}$, $\sigma_\mathrm{N}^2 = G M_\mathrm{N}/R_\mathrm{N}$ and $M_\mathrm{N} = 4\pi \rho_\mathrm{N} R_\mathrm{N}^3$ are the scaling factors for length, density, velocity and mass.

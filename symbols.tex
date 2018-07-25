@@ -1,0 +1,74 @@
+\newcommand \SCLradius {R}
+\newcommand \SCLdensity {\rho}
+\newcommand \SCLmass {M}
+\newcommand \DEFmass{\frac{M(r)}{M}}
+\newcommand \DEFpressure{\frac{P(r)}{\SCLdensity c^2}}
+\newcommand \DEFdensity{\frac{\rho(r)}{\SCLdensity}}
+
+\NewDocumentCommand{\DEFradius}{O{1}}{%
+	\ifnum #1>0 %
+		\frac{r^{#1}}{R^{#1}} %
+	\else %
+		\ifnum #1=-1 %
+			\frac{R}{r} %
+		\else %
+			\frac{R^{\StrGobbleLeft{#1}{1}}}{r^{\StrGobbleLeft{#1}{1}}} %
+		\fi %
+	\fi %
+}
+
+\newcommand \SCLradiusB {R_{\text{\tiny B}}}
+\newcommand \SCLmassB {M_{\text{\tiny B}}}
+\newcommand \SCLdensityB{\rho_{\text{\tiny B}}}
+\newcommand \SCLlambdaB{\lambda_{\text{\tiny B}}}
+\newcommand \DEFspeedOfSound {\frac{\varsigma^2(r)}{c^2}}
+
+\newcommand \DEFmassB{\frac{M(r)}{\SCLmassB}}
+\newcommand \DEFpressureB{\frac{P(r)}{\SCLdensityB \sigma^2}}
+\newcommand \DEFdensityB{\frac{\rho(r)}{\SCLdensityB}}
+
+\NewDocumentCommand{\DEFradiusB}{O{1}}{%
+	\ifnum #1>0 %
+		\frac{r^{#1}}{\SCLradiusB^{#1}} %
+	\else %
+		\ifnum #1=-1 %
+			\frac{\SCLradiusB}{r} %
+		\else %
+			\frac{\SCLradiusB^{\StrGobbleLeft{#1}{1}}}{r^{\StrGobbleLeft{#1}{1}}} %
+		\fi %
+	\fi %
+}
+
+\def \SCLfermiEnergy{\varepsilon_{\text{\tiny F}}}
+
+\NewDocumentCommand{\DEFfermiEnergy}{O{1}}{%
+	\ifnum #1=1 %
+		\SCLfermiEnergy(r) %
+	\else %
+		\SCLfermiEnergy^{#1}(r) %
+	\fi %
+}
+
+
+\def \supPlanck {\text{\tiny P}}
+
+
+% velocity
+\def \SYMvel	{V}
+\def \SYMvbulge	{V_\mathrm{b}}
+\def \SYMvdisk	{V_\mathrm{d}}
+\def \SYMvgas	{V_\mathrm{g}}
+\def \SYMvtot	{V_\mathrm{tot}}
+\def \SYMvobs	{V_\mathrm{obs}}
+\def \SYMvbar	{V_\mathrm{bar}}
+\def \SYMvdark	{V_\mathrm{DM}} % inferred prediction
+\def \SYMvDM	{v_\mathrm{DM}} % analytic response
+
+
+% acceleration
+\def \SYMacc	{a}
+\def \SYMatot	{a_\mathrm{tot}}
+\def \SYMaobs	{a_\mathrm{obs}}
+\def \SYMabar	{a_\mathrm{bar}}
+\def \SYMaDM	{a_\mathrm{DM}}
+\def \SYMafrak	{\mathfrak{a}_0}

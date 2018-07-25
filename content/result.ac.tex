@@ -1,0 +1,27 @@
+\subsection{Acceleration correlations}
+\label{sec:result:ac}
+% radial acceleration correlation (RAC)
+The radial acceleration correlation (hereafter RAC) compares the total acceleration $\SYMatot$, implying all matter contribution, with the baryonic component $\SYMabar$, see top panels of \cref{fig:acceleration:grid}. The correlation in this projection ($\SYMatot$-$\SYMabar$) is well described by McGaugh's empirical fit \citet{2016arXiv160905917M}, \begin{equation}
+	\label{egn:mcgaugh-fit}
+	\SYMatot = \frac{\SYMabar}{1 - \e^{-\sqrt{\SYMabar/{\SYMafrak}}}}
+\end{equation} with the only parameter $\SYMafrak \approx \SI{1.20E-10}{\metre/\second^2}$. It clearly shows a deviation from the linear correlation, inferred from spiral galaxies, in the low acceleration regime ($\SYMabar \ll \SYMafrak$), what is dominated by dark matter. In the high acceleration regime ($\SYMabar \gg \SYMafrak$), where baryonic matter dominates, the linear relation is recovered.
+
+\loadfigure{figure/accelerationGrid}
+
+% mass discrepancy acceleration relation
+An equivalent representation of the link between baryonic and total components is given by the mass discrepancy acceleration relation (hereafter MDAR). It is usually defined as the ratio between the total velocity and the baryonic velocity, $D = \SYMvtot/\SYMvbar$. With $a = v^2/r$ this relation is equivalent to $D = \SYMatot/\SYMabar$ and the results are illustrated in the bottom panels of \cref{fig:acceleration:grid}. In the limiting case of spherical mass distributions and with $a = \diff{\Phi}{r}$ the relation may be linked to the enclosed masses through $D = M_{\rm tot}/M_{\rm bar}$.
+
+% RAC/MDAR reproduction qualitatively
+According to our results we conclude that all considered models (RAR,NFW,DC14) are able to reproduce the acceleration correlations (RAC and MDAR). Qualitatively, they look similarly good compared to the empirical correlation (\ref{egn:mcgaugh-fit}) inferred from original SPARC data. Especially, the deviation in the low acceleration regime look adequate, representing the dark matter dominated region. Unsurprisingly, the linear relation in the high acceleration regime, representing the baryonic matter dominated region, is reproduced as well. This is obvious because the DM halo models predict mass profiles with negligible DM contribution in the inner disk region towards the bulge.
+
+% evidence of redshift dependency
+Indeed, according to some authors RAC and MDAR does not show any new physics and may be explained within the $\Lambda$CDM framework \citep{2016arXiv161206329N,2016arXiv161006183K,2016arXiv161208857S}. Based on modern cosmological simulations, \citet{2016arXiv161006183K} predict even a redshift dependency of the acceleration parameter $\SYMafrak$ what emphasizes that the correlation is universal only regarding the morphological classification.
+
+% halo focus critics
+Both, the RAC and MDAR, have been criticized that their representation focus only on the low acceleration regime where dark matter dominates. Therefore, \citet{2017arXiv170708280C} suggested to compare the baryonic component, $\SYMabar$, with the ratio of the baryonic and dark matter components, $\SYMaDM/\SYMabar$, what gives also information about dark matter in the intermediate acceleration regime. They clearly realized that the original representation of RAC/MDAR shows a fundamental link on halo scales but simultaneously obscures the relation between dark and baryonic matter on inner halo scales. Therefore, any DM model independent of the inner shape (cored or cuspy) would reproduce the linear relation in the baryon dominated region.
+
+% projection proposal
+Following that argument we suggest a similar approach. Thus, we want to emphasize that it is more convenient to connect directly the dark matter component, $\SYMaDM = \SYMaobs - \SYMabar$, with the baryonic counterpart $\SYMabar$. This reveals more information about the relation between baryonic and dark matter ranging from the low acceleration up to the high acceleration regime. Especially details about the DM acceleration in the baryon dominated part are unveiled. In this presentation we find (on a first glimpse) a linear correlation in the loglog-plot rather than the empirical fit proposed by \citet{2016arXiv160905917M}. The important fact remains that a radial acceleration correlation is found and ranges from a DM dominated region to a baryonic matter dominated region, see middle panels of \cref{fig:acceleration:grid}. Contrasted with the original representation we noticed an increased scatter (in form of a \textit{scatter shower}) in the high acceleration regime which we are going to analyze in more detail.
+
+% comparision limits
+Finally, we want to note that regardless of the presentation ($\SYMatot$ or $\SYMaDM$) it is difficult to compare the different DM models quantitatively with respect to the acceleration correlation found in the SPARC database due to the increased scatter. Qualitatively they all are able to explain that correlation. In next, the strategy therefore is to focus on the dark matter fit of the rotation curves (rather than the inferred acceleration correlation) and assign for each fit numerical values what allows a quantitative comparison of the dark matter models.
