@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Other DM halo models}
+\label{sec:model:dc14-nfw}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+From a phenomenological viewpoint, a DM halo density profile is described by three characteristics: the inner halo, the outer halo and the transition in between. Such density profiles are usually described by the ($\alpha, \beta, \gamma$)-model \citep{1990ApJ...356..359H} 
+%
+\begin{equation}
+    \label{eqn:hernquist}
+	\frac{\rho(r)}{\rho_\mathrm{N}} = \qbracket{\frac{r}{R_\mathrm{N}}}^{-\gamma}\qbracket{1 + \qbracket{\frac{r}{R_\mathrm{N}}}^\alpha}^{-\frac{\beta - \gamma}{\alpha}},
+\end{equation} 
+%
+where $\alpha$ describes the transition, $\beta$ the outer slope and $\gamma$ the inner slope. \add{Following Newtonian dynamics --- that is fully sufficient on halo scales --- then the velocity is given by \begin{equation}
+    \label{eqn:circular-velocity}
+    \frac{v^2(r)}{\sigma_\mathrm{N}^2} = \frac{R_{\rm N}}{r}\frac{M(r)}{M_{\rm N}}
+\end{equation} and the enclosed mass by \begin{equation}
+    \label{eqn:enclosed-mass}
+     \frac{M(r)}{M_{\rm N}} = \int \limits_0^r \qbracket{\frac{r}{R_{\rm N}}}^2 \frac{\rho(r)}{\rho_\mathrm{N}} \frac{\d r}{R_{\rm N}},
+\end{equation}} For the following DM halo models we will use $R_\mathrm{N}$, $\rho_\mathrm{N}$, $\sigma_\mathrm{N}^2 = G M_\mathrm{N}/R_\mathrm{N}$ and $M_\mathrm{N} = 4\pi \rho_\mathrm{N} R_\mathrm{N}^3$ as scaling factors for length, density, velocity and mass, respectively.
+
+\add{In \cref{fig:profile-illustration-mep} we illustrate the typical morphology of common DM halo models used here for the SPARC galaxies. For a better comparison the plots are normalized with respect to the halo located at the velocity maximum on halo scales.}
+
+%% -- DC14 --
+Based on the general ($\alpha, \beta, \gamma$)-model, \citet{2014MNRAS.441.2986D} \add{modelled CDM halos including baryonic feedback mechanisms in galaxy formation. They} found that the three parameters ($\alpha, \beta, \gamma$) are related through 
+\begin{align}
+    \label{eqn:dc14:alpha}
+	\alpha &= 2.94 - \log_{10}\qbracket{(10^{X + 2.33})^{-1.08} + (10^{X+2.33})^{2.29}},\\
+	\label{eqn:dc14:beta}
+    \beta &= 4.23 + 1.34 X + 0.26 X^2,\\
+    \label{eqn:dc14:gamma}
+    \gamma &= -0.06 + \log_{10}\qbracket{(10^{X + 2.56})^{-0.68} + 10^{X+2.56}},
+\end{align} 
+%
+where $X = \log_{10}(M_*/M_\mathrm{halo})$ describes the stellar-to-dark matter ratio. \add{For the circular velocity \cref{eqn:circular-velocity} the enclosed mass \cref{eqn:enclosed-mass} is given by a} hypergeometric function
+%
+\begin{equation}
+	\frac{M(r)}{M_\mathrm{N}} = \frac{1}{3-\gamma} \qbracket{\frac{r}{R_\mathrm{N}}}^{3-\gamma} \pFq{2}{1}(p_1,p_2;\,q_1;\,-[r/R_\mathrm{N}]^\alpha),
+\end{equation} 
+%
+with $p_1 = (3-\gamma)/\alpha$, $p_2 = (\beta-\gamma)/\alpha$ and $q_1 = 1 + (3 - \gamma)/\alpha$. In the following, we refer this model as DC14.
+
+%% -- NFW --
+Alternatively, for $\alpha = 1$, $\beta = 3$ and $\gamma = 1$ the ($\alpha, \beta, \gamma$)-model reduces to the NFW model \citep{1996ApJ...462..563N,1997ApJ...490..493N} as obtained from early DM-only N-body simulations. \add{This DM model develops cuspy halos of the following type}
+%
+\begin{equation}
+	\frac{\rho(r)}{\rho_\mathrm{N}} = \qbracket{\frac{r}{R_\mathrm{N}}}^{-1}\qbracket{1 + \frac{r}{R_\mathrm{N}}}^{-2},
+\end{equation} 
+%
+with the circular velocity \begin{equation}
+	\frac{v^2(r)}{\sigma_\mathrm{N}^2} = \frac{\ln(1 + r/R_\mathrm{N})}{r/R_\mathrm{N}} - \frac{1}{1 + r/R_\mathrm{N}}.
+\end{equation} 
+
+%% -- Burkert --
+In contrast to NFW, \citet{1995ApJ...447L..25B} proposed a DM density profile with a cored halo of the following type
+%
+\begin{equation}
+    \frac{\rho(r)}{\rho_\mathrm{N}} = \qbracket{1 + \frac{r}{R_\mathrm{N}}}^{-1}\qbracket{1 + \bracket{\frac{r}{R_\mathrm{N}}}^{2}}^{-1}.
+\end{equation} 
+%
+\add{For the circular velocity \cref{eqn:circular-velocity} the enclosed mass \cref{eqn:enclosed-mass} is given by}
+%
+\begin{multline}
+     \frac{M(r)}{M_{\rm N}} = \frac14 \ln(1 + [r/R_{\rm N}]^2) + \frac12 \ln(1 + r/R_{\rm N})\\
+     - \frac12 \arctan(r/R_{\rm N}).
+\end{multline} 
+%
+\add{With $M_0 \approx M(R_N)$ being the mass scale originally interpreted as the core mass of the halo \citep[e.g.][]{2000ApJ...537L...9S} while we obtain the relation $M_N = 8 M_0$. Further, the density scale $\rho_N$ describes the central density $\rho_0$ and the length scale $R_{\rm N}$ can be identified with the Burkert radius $r_{\rm B}$ fulfilling the condition $\rho(r_{\rm B}) = \rho_0/4$.}
+
+%% -- Einasto --
+Another interesting and successful candidate is the Einasto model \citep{1989A&A...223...89E}, a purely empirical fitting function with no commonly recognized physical basis \citep{2006AJ....132.2685M}. The DM halo density profiles of that model are of the following type, given in a normalized form,
+%
+\begin{equation}
+    \frac{\rho(r)}{\rho_\mathrm{N}} = \e^{-[r/R_{\rm N}]^{\alpha}}.
+\end{equation} 
+%
+The exponent $\alpha$ describes the shape of the density profile. \add{The circular velocity and the enclosed mass are given by \cref{eqn:circular-velocity,eqn:enclosed-mass}. This model develops mass distributions with a finite mass $M_{\rm tot}/M_{\rm N} = \Gamma(3/\alpha)/\alpha$ for $r\to\infty$ (see also \citealp{2012A&A...540A..70R}). The typical $\alpha$ values obtained in this work for the SPARC data-set, as well as the comparison with the same values coming from N-body simulations (either with or without baryonic effects) are given in subsections \ref{boundaryC}, \ref{sec:baryonic-effect} and \ref{sec:result:gof}, and Fig. \ref{fig:parameter-distribution:einasto}}.
+
+%Another common DM halo model is the pseudo-isothermal sphere model which is a simplified model of the isothermal sphere developing a cored halo \citep{Binney2008}. Note that the isothermal sphere is a limiting case of the fermionic MEPP model with $\beta_0 \to 0$, $\theta_0 \ll -1$ and $W_0 \to \infty$. It is also a special case of the Hernquist model with $\alpha = 2$, $\beta=2$ and $\gamma = 0$. The density profile is described by \begin{equation}
+%     \frac{\rho(r)}{\rho_\mathrm{N}} = \qbracket{1 + \bracket{\frac{r}{R_\mathrm{N}}}^{2}}^{-1}
+%\end{equation} The enclosed mass of such a profile is given by \begin{equation}
+%     \frac{M(r)}{M_{\rm N}} = \frac{r}{R_{\rm N}} - \arctan(r/R_{\rm N})
+%\end{equation} The circular velocity is then given by \cref{eqn:circular-velocity}.

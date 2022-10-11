@@ -1,10 +1,6 @@
 %% Language and font encodings
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage{ae,aecompl}
-
-%\usepackage{microtype}			% improv. of white-space
-%\usepackage{palatino} 			% Use the Palatino font by default
 \usepackage{lmodern}
 \usepackage[english]{babel}
 
@@ -15,24 +11,18 @@
 \usepackage{xparse}
 \usepackage{xstring}
 \usepackage{booktabs}
-\usepackage[all]{nowidow}
-
+\usepackage{paralist}
+\usepackage{enumitem}
+\usepackage[defaultlines=6,all]{nowidow}
 
 %% references
-\usepackage{natbib}												% citation
-%\usepackage{hyperref}											% hyperlinks for refs
 \usepackage{nameref}
-\usepackage{cleveref}											% multiple refs
-\usepackage{url}													% for pretty urls
+\usepackage[capitalise]{cleveref} % multiple refs
+\usepackage{url} % for pretty urls
 
 
-% text
-%\usepackage{siunitx}											% for SI notations
-\usepackage[normalem]{ulem}								% underline text
-
-% AASTEX workaroudn to load siunitx package
+% AASTEX workaround to load siunitx package
 \usepackage{savesym}
 \savesymbol{tablenum}
 \usepackage{siunitx}
 \restoresymbol{SIX}{tablenum}
-

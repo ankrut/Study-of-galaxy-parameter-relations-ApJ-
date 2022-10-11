@@ -1,8 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology}
 \label{sec:fitting}
-This work uses the new Spitzer Photometry and Accurate Rotation Curves (\href{http://astroweb.cwru.edu/SPARC/}{SPARC}) database. It includes 3.6$\micron$ near-infrared and 21 cm observations. The former traces the stellar distribution (bulge and disk) while the latter traces the atomic gas distribution and provides velocity fields from which the rotation curves are derived. See \citet{2016AJ....152..157L} for a complete description of the SPARC database.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The data used in this work is obtained from the Spitzer Photometry and Accurate Rotation Curves (\href{http://astroweb.cwru.edu/SPARC/}{SPARC}) database. It contains independent observations of the total velocity ($V_{\rm tot}$) and luminous mass distributions which allows to infer the bulge ($V_{\rm b}$), disk ($V_{\rm d}$), and gas ($V_{\rm g}$) velocity contributions. We extract the tangential velocities of the DM component from the data (for each galaxy of the sample) by subtracting the inferred baryonic components (as provided in the SPARC database) from the total velocity $V_{\rm tot}$, and statistically compare with the corresponding velocities predicted by each DM model as detailed in next. %Of great importance is the impact of baryonic matter onto the DM distribution.
+
+%Early numerical simulations within the CDM framework predict a cuspy DM halo well known as the NFW model \citep{1996ApJ...462..563N}. Although its cuspy prediction has been in conflict with the observed cored halos from the beginning, it is often used for comparative reasons. For further information about the \textit{core-cusp} problem see \citet{2010AdAst2010E...5D}.
+
+%It is important to recall here that early CDM simulations were limited to gravitational interaction and dark matter only. The strongest suspicion, therefore, was the neglect of the obvious baryonic components. The inclusion of baryonic matter and its effects onto the DM distribution is referred as baryonic feedback (e.g. supernovae, stellar wind, dynamical friction). However, all cosmological models currently adopt phenomenological implementations of many of these core processes, which must be tuned to observations. Many details of how these diverse processes interact within a hierarchical structure formation setting remain poorly understood \citep[see e.g.][]{2015ARA&A..53...51S}.
+
+%Following the idea of baryonic feedback induced halos, \citet{doi:10.1093/mnras/stu729} has shown that including the influence of galaxy formation may flatten the inner density profile to transform halos from cuspy into cored. In that work they considered the Hernquist model \citep{1990ApJ...356..359H}, a generalized phenomenological halo model, and linked its parameters with baryonic matter.
+
+%With a similar approach, although based on the Burkert model \citep{1995ApJ...447L..25B} producing cored halos, it was possible to reveal a link between characteristics of the DM and baryonic distributions in galaxies \citep{2018FoPh...48.1517S,2019ApJ...873..106D}.
+
+%A completely different idea is followed by all MONDian approaches which claim that the observed total velocities and inferred velocities from light are linked through new underlying physics, so called Modified Newtonian Dynamics, without the assumption of any additional dark matter \citep{1983ApJ...270..365M,1983ApJ...270..371M,1983ApJ...270..384M}. Further information about  various modified gravity theories, within a wider context not limited only to the necessity of dark matter, are given in the extensive review by \citet{2012PhR...513....1C}.
+
+%On the other hand, as mentioned in the introduction, our approach is based on first principles. That is, we assume dark matter to be composed of massive and self-gravitating fermions governed by quantum statistics and the relativistic gravitational equation. Such a DM distribution then shares many characteristics of phenomenological DM halo models. However, note that this approach does not include the interaction with baryonic matter. It is therefore of great interest to compare our approach with the approaches including baryonic feedback.
 
 \input{content/fitting.data.tex}
-\input{content/fitting.models.tex}
 \input{content/fitting.method.tex}
+

@@ -1,10 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data selection}
 \label{sec:data}
-The SPARC data is distributed in separated files and can be found at \url{http://astroweb.cwru.edu/SPARC/}. Specific information about each galaxy (i.e Hubble type, inclination etc) are provided in the file \href{http://astroweb.cwru.edu/SPARC/Table1.mrt}{Table1.mrt}. The information we are interested in, like galactocentric radius $r$ and rotation curves $\SYMvel$, are provided in the file \href{http://astroweb.cwru.edu/SPARC/Table2.mrt}{Table2.mrt}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In detail, we extract the observed circular velocity $\SYMvobs$ and the baryonic contribution $\SYMvbar$, composed of a bulge ($\SYMvbulge$), disk ($\SYMvdisk$) and gas component ($\SYMvgas$). The bulge and disk components are inferred from surface brightness observations for a given mass-to-light ratio. In sum, the baryonic component is given by \begin{equation}
+The SPARC database includes \SI{3.6}{\micro\meter} near-infrared and \SI{21}{\centi\meter} observations. The former traces the stellar mass distribution (bulge and disk) while the latter traces the atomic gas distribution and provides velocity fields from which the RCs are derived. See \citet{2016AJ....152..157L} for a complete description of the SPARC database.
+
+The data is distributed in separated files such as \href{http://astroweb.cwru.edu/SPARC/SPARC_Lelli2016c.mrt}{Table1.mrt} (i.e. Hubble type, inclination etc.) and \href{http://astroweb.cwru.edu/SPARC/MassModels_Lelli2016c.mrt}{Table2.mrt} (i.e. RC data) and can be found at \url{http://astroweb.cwru.edu/SPARC/}. %Specific information about each galaxy (i.e. Hubble type, inclination etc.) are provided in the file \href{http://astroweb.cwru.edu/SPARC/Table1.mrt}{Table1.mrt}. The information we are interested in, like galactocentric radius $r$ and rotation curves $\SYMvel$, are provided in the file \href{http://astroweb.cwru.edu/SPARC/Table2.mrt}{Table2.mrt}.
+
+We extract the observed circular velocity $\SYMvtot$ and the baryonic contribution $\SYMvbar$, composed of a bulge ($\SYMvbulge$), disk ($\SYMvdisk$) and gas component ($\SYMvgas$). The bulge and disk components are inferred from surface brightness observations for a given mass-to-light ratio. The baryonic component is then given by 
+%
+\begin{equation}
 	\label{eqn:baryonic-sum}
-	\SYMvbar^2 = \Upsilon_\mathrm{b}^{\phantom{2}} \SYMvbulge^2 + \Upsilon_\mathrm{d}^{\phantom{2}} \SYMvdisk^2 + \SYMvgas^2
-\end{equation} For convenience, the velocities $\SYMvbulge$ and $\SYMvdisk$ are provided for a mass-to-light ratio of $1\,M_\odot/L_\odot$ what does not represent the real value for a galaxy. Since the mass-to-light ratio is just a constant scaling factor we may correct the velocities simply with the mass-to-light \textit{ratio factors} $\Upsilon_b$ and $\Upsilon_d$ for bulge and disk (in units of $M_\odot/L_\odot$). Then the rotation curve for each component traces immediately its centripetal acceleration $\SYMacc = \SYMvel^2/r$.
+	\SYMvbar^2 = \Upsilon_\mathrm{b}^{\phantom{2}} \SYMvbulge^2 + \Upsilon_\mathrm{d}^{\phantom{2}} \SYMvdisk^2 + \SYMvgas^2.
+\end{equation} 
+%
+For convenience, the given velocities $\SYMvbulge$ and $\SYMvdisk$ in the SPARC data are normalized for a mass-to-light ratio of $1\,M_\odot/L_\odot$.
 
-For the data selection we proceed similar as was done by \citet{2016arXiv160905917M}. Thus, we want to note that we consider same mass-to-light ratios since the following data selection output depends on the values. For all bulges we choose $\Upsilon_\mathrm{b} = 0.7$ and for all disks $\Upsilon_\mathrm{g} = 0.5$ as convenient average representatives. Further, we exclude all galaxies with a bad quality flag ($Q=3$) and face-on galaxies with an inclination $i<30\degr$. Then we exclude all points with a velocity error greater than $10\%$ and all points where the baryonic velocity is greater than $95\%$ of the observed velocity. The latter affects mainly data points in the inner region which is dominated by baryonic matter and strongly depend on the chosen mass-to-light factors. Afterwards, we exclude all remaining galaxies with less then 6 data points and obtain 124 galaxies (out of 174) with 2396 points (of 3355) in total.
+\add{In this work we follow the same data selection criteria as done in \citet{2016PhRvL.117t1101M}. We choose averaged mass-to-light ratios $\Upsilon_\mathrm{b} = 0.7$ for all bulges and $\Upsilon_\mathrm{d} = 0.5$ for all disks as convenient average representatives. We exclude all galaxies with a bad quality flag ($Q=3$) and face-on galaxies with an inclination $i < \SI{30}{\degree}$. The latter is to minimize the $\sin(i)$ corrections to the observed velocities. For all measurements we require a minimum precision of \SI{10}{\percent} in velocity.}
+
+\add{Additionally we reject all points where the baryonic velocity is greater than \SI{95}{\percent} of the observed velocity. This condition is required to avoid negative velocities for the inferred DM components. It affects mainly data points in the inner region which is dominated by baryonic matter and strongly depends on the chosen mass-to-light factors. Therefore, those inner points are less reliable. Finally, we exclude all remaining galaxies with less than 6 data points to be statistically significant.} 
+
+\add{We obtain $120$ galaxies (out of $174$) with $2396$ points (of $3355$) in total. Galaxies not fulfilling the quality criteria have such poor data that they do not allow to gain any insights. In the worst case (e.g. too few points, points on a nearly straight line, etc.) it is not possible to fit the rotation curves.}

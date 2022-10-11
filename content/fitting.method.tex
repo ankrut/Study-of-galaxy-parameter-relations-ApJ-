@@ -1,12 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data fitting}
-We fit the inferred DM rotation curve, $\SYMvdark^2 = \SYMvobs^2 - \SYMvobs^2$, with the Levenberg–Marquardt (LM) algorithm to find a $\chi^2$ minima. The quantity $\chi^2$ is calculated by \begin{equation}
-	\chi^2(\vec p) = \sum \limits_{i=1}^N \qbracket{\frac{V_i - v(r_i,\vec p)}{\sigma_i}}^2
-\end{equation} with $N$ the number of data points, $V_i$ is the set of circular velocity data, $r_i$ is the corresponding set of radius data, $v(r_i,\vec p)$ is the predicted circular velocity at radius $r_i$ for the model parameter vector $\vec p$ and $\sigma_i$ is the uncertainty for $V_i$.
+\label{LM-fitting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For the RAR model, $\vec p = (\theta_0, W_0, \beta_0, m)$, we vary the three free parameter ($\theta_0, W_0, \beta_0$) for a fixed particle mass $m$. Due to numerical stability improvements we consider the cutoff parameter $W_0 =  1.73 \theta_0 + 1.07 + 10^\omega$ to make sure our fitting algorithm obtains only solutions with a halo (for approx. $W_0 < 1.73 \theta_0 + 1.07$ the halo gets disrupted and only a degenerate core remains). Phenomenally, we can vary the cutoff through the cutoff parameter $W_0$ and the steepness through the degeneracy parameter $\theta_0$. The latter is only possible within the transition regime ($\theta_0 \in [-5,15]$). For high degeneracy, $\theta_0 > 15$, we obtain a cored halo with a degenerate core. For these degenerate solutions we propose a particle mass of $m = 50 \mathrm{keV/c^2}$ as a promising candidate \citep{RAR-II}.
+We infer the circular velocity of the DM component directly from observations via 
+%
+\begin{equation}
+	\label{eqn:baryonic-diff}
+	\SYMvdark^2 = \SYMvtot^2 - \SYMvbar^2,
+\end{equation} 
+%
+where the uncertainty in $V_{\rm DM}$ is calculated from the uncertainties in the other velocity components within \add{linear} error propagation theory. \add{Note that only the uncertainties in the total RCs ($\Delta V_{\rm tot}$) are provided within the SPARC data-set. The uncertainty is therefore given by}
+%
+\begin{equation}\label{eqn:VDM-error}
+    \Delta V_{\rm DM} = \abs{\diffpart{V_{\rm DM}}{V_{\rm tot}}} \Delta V_{\rm tot}.
+\end{equation} 
+%
+The inferred DM contribution of each galaxy then will be fitted by the competing DM models which are described in section \ref{sec:dark-matter-models}.
 
-The NFW model describes a fixed cuspy halo with two free scaling parameter, e.g. $\vec p = (R_N,\rho_N)$. Therefore, that model can not explain the variation of the inner RC steepness or the variation in the cutoff. Instead, it is expected that NFW covers the rotation curves well on average due to its wide maxima bump.
-
-The DC14 model, e.g. $\vec p = (X,R_N,\rho_N)$, has the additional parameter $X$ compared to NFW which affects the inner steepness and the maxima bump width simultaneously.
-
-For the LM fitting algorithm we need well chosen initial values to ensure convergence. Because that algorithm finds only local minima we choose 100 parameter sets randomly within a range. For the RAR model we have $\theta_0\in [25,45]$, $\beta_0 = [10^{-8},10^{-5}]$ and $\omega\in[0,2]$. For NFW we have $R_N\in[10^{1},10^{4}],$ and $\rho_N = [10^{-4},10^{-1}]$. For the DC14 model we choose the same ranges as for the NFW model. Also, according to \citet{2016arXiv160505971K} we may bound the initial values of the additional parameter to $X\in[-3.75,-1.3]$. These ranges are no restrictions such that the fitting algorithm may find solutions beyond the boundaries.
+With this information, we use the Levenberg–Marquardt (LM) algorithm of least-square error minimization for each dark matter component calculated by 
+%
+\begin{equation}
+    \label{eqn:method:chi-square}
+	\chi^2(\vec p) = \sum \limits_{i=1}^N \qbracket{\frac{V_i - v(r_i,\vec p)}{\Delta V_{i}}}^2.
+\end{equation} 
+%
+Here, $N$ is the number of data points for a given galaxy, $V_i$ is the set of inferred DM circular velocities from the data at each corresponding measured radius $r_i$, while $v(r_i,\vec p)$ accounts for the circular velocity at $r_i$ for each model parameter vector $\vec p$ (described below), and $\Delta V_{i}$ is the uncertainty in $V_i$ as given in \cref{eqn:VDM-error}.

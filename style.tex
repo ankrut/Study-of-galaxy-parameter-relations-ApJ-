@@ -9,3 +9,15 @@
 \DeclareSIUnit \eV {eV}
 \DeclareSIUnit \eVcc {eV/$c^2$}
 \DeclareSIUnit \Msun {M_\odot}
+
+% change SI range
+\sisetup{
+	range-phrase	= \text{ -- },
+	range-units		= single
+}
+
+\setlist[description]{
+  leftmargin=\parindent
+}
+
+\newcommand{\add}[1]{{\color{orange}{}#1}}

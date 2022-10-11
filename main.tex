@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{aastex62}
+\documentclass[twocolumn,twocolappendix,linenumbers]{aastex631}
 \input{packages.tex}
 \input{macros.tex}
 \input{style.tex}
@@ -10,18 +10,16 @@
 \input{content/title.tex}
 \input{content/abstract.tex}
 
-\keywords{
-  galaxies: halo ---
-  galaxies: structure ---
-  dark matter
-}
+\keywords{dark matter - galaxies: structure - galaxies: fundamental parameters - galaxy: kinematics and dynamics}
 
-\input{content/introduction.tex}
-\input{content/fitting.tex}
-\input{content/result.tex}
-\input{content/conclusion.tex}
-
-\input{acknowledgments.tex}
+\input{content/introduction}
+\input{content/fitting}
+\input{content/dark_matter_models}
+\input{content/result}
+\input{content/conclusion}
+\appendix
+\input{content/parameter_distributions}
+\input{content/parameter_correlations}
 
 \bibliographystyle{aasjournal}
 \bibliography{bib-articles,bib-books}
