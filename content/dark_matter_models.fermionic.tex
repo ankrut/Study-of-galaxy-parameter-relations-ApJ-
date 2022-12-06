@@ -5,15 +5,14 @@
 
 It has been proposed by several authors (see, e.g. \citealp{2020EPJP..135..290C} for an exhaustive list of references) that DM halos could be made of fermions (e.g. sterile neutrinos) in gravitational interaction. It is usually assumed that the fermions are in a statistical equilibrium state described by the Fermi-Dirac distribution function. However, the notion of statistical equilibrium for systems with long-range interactions is subtle. If the fermions are non-interacting, apart from gravitational forces, the relaxation time towards statistical equilibrium due to gravitational encounters scales as $(N/\ln N)t_D$ \citep[see e.g.][]{Binney2008} and exceeds the age of the Universe by many orders of magnitude. For example, assuming a fermion mass $m c^2 \sim \SI{50}{\kilo\eV}$, a DM halo of mass $M\sim \SI{E11}{\Msun}$ and radius $R \sim \SI{30}{\kilo\parsec}$ contains $N\sim \num{E72}$ fermions for a dynamical time $t_D\sim 1/\sqrt{R^3/G M}\sim 100\, {\rm Myrs}$. Therefore, on the Hubble time, the gas of fermions is essentially collisionless, being described by the Vlasov-Poisson equations. Yet, it can achieve a form of statistical equilibrium on a coarse-grained scale through a process of violent relaxation. This concept was introduced  by \cite{1967MNRAS.136..101L} in the case of collisionless stellar systems and has been exported to DM by \citet{1996ApJ...466L...1K} and \citet{2015PhRvD..92l3527C}. 
 
-Assuming ergodicity (efficient mixing), \citet{1967MNRAS.136..101L} used a MEP and looked for the {\it most probable} equilibrium state consistent with the constraints of the collisionless dynamics. The maximization of the Lynden-Bell entropy $S$ under suitable constraints leads to a \add{coarse-grained distribution function $\bar{f}({\vec r},{\vec v})$} similar to the Fermi-Dirac distribution function. Therefore, the process of violent relaxation may provide a justification of the Fermi-Dirac distribution function for DM halos without the need of efficient gravitational encounters. However, when coupled to gravity, this distribution function has an infinite mass (i.e., there is no maximum entropy state), implying that either violent relaxation is incomplete or that tidal effects have to be taken into account (if the system is not isolated). The problem therefore becomes an out-of-equilibrium problem and it is necessary to develop a kinetic theory of collisionless relaxation (see e.g. \citealp{2021arXiv211213664C} for a review).
+Assuming ergodicity (efficient mixing), \citet{1967MNRAS.136..101L} used a MEP and looked for the {\it most probable} equilibrium state consistent with the constraints of the collisionless dynamics. The maximization of the Lynden-Bell entropy $S$ under suitable constraints leads to a coarse-grained distribution function $\bar{f}({\vec r},{\vec v})$ similar to the Fermi-Dirac distribution function. Therefore, the process of violent relaxation may provide a justification of the Fermi-Dirac distribution function for DM halos without the need of efficient gravitational encounters. However, when coupled to gravity, this distribution function has an infinite mass (i.e., there is no maximum entropy state), implying that either violent relaxation is incomplete or that tidal effects have to be taken into account (if the system is not isolated). The problem therefore becomes an out-of-equilibrium problem and it is necessary to develop a kinetic theory of collisionless relaxation (see e.g. \citealp{2021arXiv211213664C} for a review).
 
 One approach is to use a Maximum Entropy Production Principle (MEPP) and argue that the most probable evolution of the system on the coarse-grained scale is the one that maximizes the rate of Lynden-Bell entropy $\dot S$ under the constraints of the collisionless dynamics \citep{1996ApJ...471..385C}. This leads to a generalized Fokker-Planck equation having the form of a fermionic Kramers equation 
 \begin{equation}
     \label{kramers}
      \frac{\partial \bar f}{\partial t} + \vec v \cdot \frac{\partial \bar f}{\partial \vec r} - \nabla\Phi \cdot \frac{\partial \bar f}{\partial \vec v} = \frac{\partial \vec J}{\partial \vec v},
 \end{equation}
-% \cdot \left\lbrack D\left(\frac{\partial \bar f}{\partial \vec v} + \frac{1}{\beta} \bar f(1-\bar f) \vec v\right)\right\rbrack
-\add{where $\vec J=D[\partial \bar f/\partial \vec v + (mc^2/kT) \bar f (1-f/\eta_0) \vec v]$ is a diffusion current pushing the system towards statistical equilibrium, $D$ the diffusion coefficient, $T \equiv T(t)$ is the temperature evolving in time so as to conserve the total energy \citep{1998MNRAS.300..981C}, $k$ is the Boltzmann constant, $c$ is the speed of light, and $m$ is the DM fermion mass}. However, this approach is heuristic and does not determine the expression of the diffusion coefficient.
+where $\vec J=D[\partial \bar f/\partial \vec v + (mc^2/kT) \bar f (1-f/\eta_0) \vec v]$ is a diffusion current pushing the system towards statistical equilibrium, $D$ the diffusion coefficient, $T \equiv T(t)$ is the temperature evolving in time so as to conserve the total energy \citep{1998MNRAS.300..981C}, $k$ is the Boltzmann constant, $c$ is the speed of light, and $m$ is the DM fermion mass. However, this approach is heuristic and does not determine the expression of the diffusion coefficient.
 
 An alternative, more systematic, approach is to develop a quasilinear theory of ``gentle'' collisionless relaxation \citep{1970PhRvL..25.1155K,1980Ap&SS..72..293S,1998MNRAS.300..981C,2004PhyA..332...89C} leading to a fermionic Landau equation of the form 
 %
@@ -25,10 +24,10 @@ An alternative, more systematic, approach is to develop a quasilinear theory of 
     v'_j}\right\rbrace,
 \end{multline} 
 %
-\add{where $\bar{f}' \equiv \bar{f}({\vec r},{\vec v}', t)$, $\ln\Lambda=\ln(R/\epsilon_r)$ is the Coulomb logarithm, $R$ is the typical size of the system, $\vec u = \vec v' - \vec v$ is the relative velocity between the ``macroparticles'' of mass $m_{\rm eff}\sim 2m^4 \epsilon_r^3\epsilon_v^3/h^3$ (see also below), and $\epsilon_r$, $\epsilon_v$ are the correlation lengths in position and velocity respectively}. One can make a connection between the above two kinetic equations by using a form of thermal bath approximation, i.e., by replacing $\bar f'$ in \cref{landau} by its equilibrium (Fermi-Dirac) expression. This substitution transforms an integro-differential (Landau) equation into a differential (Kramers) equation. In this manner one can compute the diffusion coefficient explicitly \citep{1998MNRAS.300..981C}.
+where $\bar{f}' \equiv \bar{f}({\vec r},{\vec v}', t)$, $\ln\Lambda=\ln(R/\epsilon_r)$ is the Coulomb logarithm, $R$ is the typical size of the system, $\vec u = \vec v' - \vec v$ is the relative velocity between the ``macro-particles'' of mass $m_{\rm eff}\sim 2m^4 \epsilon_r^3\epsilon_v^3/h^3 \gg m$ (see also below), and $\epsilon_r$, $\epsilon_v$ are the correlation lengths in position and velocity respectively. One can make a connection between the above two kinetic equations by using a form of thermal bath approximation, i.e., by replacing $\bar f'$ in \cref{landau} by its equilibrium (Fermi-Dirac) expression. This substitution transforms an integro-differential (Landau) equation into a differential (Kramers) equation. In this manner one can compute the diffusion coefficient explicitly \citep{1998MNRAS.300..981C}.
 
-The relaxation of the coarse-grained DF $\bar{f}({\vec r},{\vec v},t)$ towards the Lynden-Bell distribution on a few dynamical times can be interpreted in terms of ``collisions'' between  ``macroparticles'' or ``clumps'' (i.e. correlated regions) with a large effective mass $m_{\rm
-eff}$ \citep{1970PhRvL..25.1155K}.  \add{These macroparticles considerably accelerate the relaxation of the system (as compared to ordinary gravitational encounters between particles of mass $m$) by increasing the diffusion coefficient $D$ in \cref{kramers}}. Processes of incomplete relaxation could be taken into account by generalizing the kinetic approach so that the diffusion coefficient rapidly falls off to zero in space and time, thereby leading to a sort of kinetic blocking. Alternatively, if the system is submitted to tidal interactions from neighboring systems one can look for a stationary solution of \cref{kramers} which accounts for the depletion of the distribution function above an escape energy.
+\add{The timescale of violent relaxation is a few $10-100$ dynamical times ($t_D$), which is shorter than the Hubble time $t_H$. This is confirmed by the kinetic theory of violent relaxation that predicts a collisionless relaxation time $t_R^{\rm non-coll.}\sim (M/m_{\rm eff})t_D$ which is much shorter than the collisional relaxation time $t_R^{\rm coll.}\sim (M/m)t_D$ because $m_{\rm eff}\gg m$ (see formula in the above paragraph). Indeed, the} relaxation of the coarse-grained DF $\bar{f}({\vec r},{\vec v},t)$ towards the Lynden-Bell distribution (of Fermi-Dirac type, see Eq. \ref{fcDF} below) on a few dynamical times can be interpreted in terms of ``collisions'' between  ``macro-particles'' or ``clumps'' (i.e. correlated regions) with a large effective mass $m_{\rm
+eff}$ \citep{1970PhRvL..25.1155K}. These macro-particles considerably accelerate the relaxation of the system (as compared to ordinary gravitational encounters between particles of mass $m$) by increasing the diffusion coefficient $D$ in \cref{kramers}. Processes of incomplete relaxation could be taken into account by generalizing the kinetic approach so that the diffusion coefficient rapidly falls off to zero in space and time, thereby leading to a sort of kinetic blocking. Alternatively, if the system is submitted to tidal interactions from neighboring systems one can look for a stationary solution of \cref{kramers} which accounts for the depletion of the distribution function above an escape energy.
 
 For classical systems evolving through two-body gravitational encounters like globular clusters, this procedure leads to the King model \citep{1962AJ.....67..471K}. For fermionic DM halos, one obtains the fermionic King model \citep{1983A&A...119...35R,1998MNRAS.300..981C} 
 %
@@ -39,118 +38,12 @@ For classical systems evolving through two-body gravitational encounters like gl
 %
 which has been written in the case of general relativistic fermionic systems for the sake of generality \citep{2018PDU....21...82A,2022IJMPD..3130002A}. Here, $\epsilon=\sqrt{p^2c^2 + m^2 c^4} - mc^2$ is the particle kinetic energy, $\mu(r)$ is the chemical potential (with the particle rest-energy subtracted off), $\epsilon_c(r)$ is the escape energy (with the particle rest-energy subtracted off), and $T(r)$ is the effective temperature. The corresponding set of three dimensionless parameters (for fixed $m$) are defined by the temperature, degeneracy and cutoff parameters, $\beta(r)=k T(r)/(m c^2)$, $\theta(r)=\mu(r)/[k T(r)]$ and $W(r)=\epsilon_c(r)/[k T(r)]$, respectively (a subscript $0$ is used when the parameters are evaluated at the center of the configuration).
 
-This distribution function takes into account the Pauli exclusion principle as well as tidal effects, and can lead to a relevant model of fermionic DM halos usually referred as the RAR model, which have been successfully contrasted against galaxy observables \citep{2018PDU....21...82A,2019PDU....24..278A,2020A&A...641A..34B,2021MNRAS.505L..64B,2022MNRAS.511L..35A}. The full family of density $\rho(r)$ and pressure $P(r)$ profiles within this model can be directly obtained as the corresponding integrals of $\bar{f}(p)$ over momentum space (bounded from above by $\epsilon \leq \epsilon_c(r)$) as detailed in \citet{2018PDU....21...82A}. This leads to a four-parametric fermionic equation of state depending on ($\beta_0,\theta_0,W_0,m$) according to the parameters in \cref{fcDF}. \add{Once with the fermionic distribution function at equilibrium as obtained from the MEP explained above, we make use of the fact that a relaxed system of fermions under self-gravity does admit a perfect fluid approximation \citep{1969PhRv..187.1767R}. Thus}, we use the stress-energy tensor of a perfect fluid in a spherically symmetric metric, $g_{\mu\nu}=\diag(\e^{2\nu(r)},-\e^{2\lambda(r)},-r^2,-r^2\sin^2\vartheta)$ \add{with $\nu(r)$, $\lambda(r)$ being the temporal and spatial metric functions and $\vartheta$ the azimutal angle}. Such configuration leads to hydrostatic equilibrium equations of self-gravitating fermions. The local $T(r)$, $\mu(r)$ and $W(r)$ fulfill the Tolman, Klein and particle's energy conservation relations, respectively (see \citealp{2018PDU....21...82A} for details). Further, $\nu_0$ is here constrained by the Schwarzschild condition $g_{00}g_{11} = -1$ at the surface where the halo pressure (and density) falls to zero.
+This distribution function takes into account the Pauli exclusion principle as well as tidal effects, and can lead to a relevant model of fermionic DM halos usually referred as the RAR model, which have been successfully contrasted against galaxy observables \citep{2018PDU....21...82A,2019PDU....24..278A,2020A&A...641A..34B,2021MNRAS.505L..64B,2022MNRAS.511L..35A}. The full family of density $\rho(r)$ and pressure $P(r)$ profiles within this model can be directly obtained as the corresponding integrals of $\bar{f}(p)$ over momentum space (bounded from above by $\epsilon \leq \epsilon_c(r)$) as detailed in \citet{2018PDU....21...82A}. This leads to a four-parametric fermionic equation of state depending on ($\beta_0,\theta_0,W_0,m$) according to the parameters in \cref{fcDF}. Once with the fermionic distribution function at equilibrium as obtained from the MEP explained above, we make use of the fact that a relaxed system of fermions under self-gravity does admit a perfect fluid approximation \citep{1969PhRv..187.1767R}. Thus, we use the stress-energy tensor of a perfect fluid in a spherically symmetric metric, $g_{\mu\nu}=\diag(\e^{2\nu(r)},-\e^{2\lambda(r)},-r^2,-r^2\sin^2\vartheta)$ with $\nu(r)$, $\lambda(r)$ being the temporal and spatial metric functions and $\vartheta$ the azimutal angle. Such configuration leads to hydrostatic equilibrium equations of self-gravitating fermions. The local $T(r)$, $\mu(r)$ and $W(r)$ fulfill the Tolman, Klein and particle's energy conservation relations, respectively (see \citealp{2018PDU....21...82A} for details). Further, $\nu_0$ is here constrained by the Schwarzschild condition $g_{00}g_{11} = -1$ at the surface where the halo pressure (and density) falls to zero.
 
-\add{An illustration of a core-halo ($\theta_0 > 10$) and a corresponding halo-only ($\theta_0 \ll -1$) solution are shown in \cref{fig:profile-illustration-mep} (we refer to section \ref{sec:morph} and to the cited works above to get a better understanding of the rich morphology of the fermionic DM model).}
-%In agreement with the isotropy of the phase-space
+An illustration of a core-halo ($\theta_0 > 10$) and a corresponding halo-only ($\theta_0 \ll -1$) solution are shown in \cref{fig:profile-illustration-mep} (we refer to section \ref{sec:morph} and to the cited works above to get a better understanding of the rich morphology of the fermionic DM model).
 
 \loadfigure{figure/ProfileIllustrationsAll}
 
-\add{Mass distributions of that fermionic model are well characterized by the cutoff difference $W(r_p) - W(r_s)$. Since $W(r)$ is defined to be zero at the surface, i.e. $W(r_s) = 0$ with $r_s$ being the surface radius where the density drops to zero, we need to focus only on the plateau cutoff $W_p = W(r_p)$ with $r_p$ being the plateau radius defined at the first minimum in the rotation curve. Other important quantities of the \textit{core-halo} family of fermionic DM mass solutions are the core mass $M_c = M(r_c)$ with $r_c$ being the core radius defined at the first maximum in the rotation curve, and the total mass $M_s = M(r_s)$ given at the surface radius $r_s$.}
+Mass distributions of that fermionic model are well characterized by the cutoff difference $W(r_p) - W(r_s)$. Since $W(r)$ is defined to be zero at the surface, i.e. $W(r_s) = 0$ with $r_s$ being the surface radius where the density drops to zero, we need to focus only on the plateau cutoff $W_p = W(r_p)$ with $r_p$ being the plateau radius defined at the first minimum in the rotation curve. Other important quantities of the \textit{core-halo} family of fermionic DM mass solutions are the core mass $M_c = M(r_c)$ with $r_c$ being the core radius defined at the first maximum in the rotation curve, and the total mass $M_s = M(r_s)$ given at the surface radius $r_s$.
 
-The density profiles in the fermionic model can develop a rich morphological behaviour: while the halo region is King-like (i.e. from polytropic-like \add{with $W_p \ll 1$} to power law-like \add{with $W_p \gtrsim 10$}, see \ref{sec:morph}), the inner region can either develop a \textit{dense core} at the center of such a halo (i.e. for large central degeneracy $\theta_0 > 10$), or not (i.e. $\theta_0 \ll -1$ in the dilute regime). Both kind of family profiles are thermodynamically and dynamically stable as well as long lived in a cosmological framework, as recently demonstrated in \citet{2021MNRAS.502.4227A}, for typical galaxies with total masses of the order $\sim 5\times 10^{10} M_\odot$. Remarkably, for \textit{core} - \textit{halo} RAR solutions with fermion masses of $m c^2\approx \SI{50}{\kilo\eV}$, the degenerate and compact DM cores may work as an alternative to the BH paradigm at the center of non-active galaxies \citep{2018PDU....21...82A,2019PDU....24..278A,2020A&A...641A..34B,2021MNRAS.505L..64B,2022MNRAS.511L..35A}. Furthermore, their eventual gravitational core-collapse in larger galaxies may offer a novel supermassive BH formation mechanism from DM \citep{2021MNRAS.502.4227A}.
-
-%There still remains the complicated problem of incomplete relaxation \citep{1967MNRAS.136..101L}. In general, the violent fluctuations of the gravitational potential die away before the system has reached statistical equilibrium in the sense of Lynden-Bell. Therefore, it may be necessary to take into account other processes of relaxation to guarantee that the system trully relaxes towards a distribution function of the form of Eq. (\ref{fcDF}). This will be the case if the fermions are self-interacting\footnote{In that case, the kinetic evolution of the system is governed
-%by the fermionic Boltzmann equation although its study is more complicated than the Kramers equation.}. Indeed, a specific model of self-interacting sterile neutrinos following Eq. (\ref{fcDF} was recently developed in \cite{2020PDU....3000699Y}. 
-
-%There still remains the complicated problem of incomplete relaxation \citep{1967MNRAS.136..101L}. In
-%general, the violent fluctuations of the gravitational potential which are the
-%engine of the collisionless relaxation die away before the system has reached
-%statistical
-%equilibrium in the sense of Lynden-Bell. Therefore, it may be necessary to take
-%into account other processes of relaxation to guarantee that the system
-%trully relaxes towards a distribution function of the form of Eq. (\ref{fcDF}). This
-%will be the case if the
-%system is submitted to external stochastic perturbations (like a ``cosmic
-%noise'') or
-%if the fermions are
-%self-interacting. In that case, the kinetic evolution of the system is governed
-%by the fermionic Boltzmann equation. Although its study is
-%more complicated than the Kramers equation, this equation can
-%explain the rapid collisional relaxation
-%of the system towards a
-%distribution function of the form of Eq. (\ref{fcDF}). Probably the two processes
-%(violent collisionless relaxation and collisional relaxation due to
-%self-interactions) are responsible for the relaxation of the system towards the
-%truncated Fermi-Dirac distribution function (\ref{fcDF}). However,
-%collisions continue to drive an evolution of
-%the system on a long timescale after the violent fluctuations of the
-%gravitational potential have died away. Therefore, self-interacting
-%fermionic dark matter can evolve
-%secularly along the series of equilibria characterized by the truncated
-%Fermi-Dirac distribution function (\ref{fcDF}).
-
-%{\small J. Binney, S.  Tremaine, {\it Galactic Dynamics}
-%(Princeton Series in Astrophysics, 1987)}
-
-
-%{\small A. Kull, R.A. Treumann, H. Boehringer,  Astrophys.
-%J.  Letters  {\bf 466}, 1 (1996)}
-
-
-%{\small P.H. Chavanis,   arXiv:2112.13664}
-
-
-%{\small P.H. Chavanis, J. Sommeria, R. Robert,
-%Astrophys. J. {\bf 471}, 385 (1996)}
-
-
-%{\small R. Ruffini, L. Stella, Astron. Astrophys. {\bf 119}, 35
-%(1983)}
-
-
-%{\small B.B. Kadomtsev, O.P. Pogutse, Phys. Rev. Lett.
-%{\bf 25}, 17 (1970)}
-
-
-%{\small G. Severne, M. Luwel, Astrophys. Space Sci.
-%{\bf 72}, 293 (1980)}
-
-%Finally, for the LM fitting algorithm we need well chosen initial values to improve convergence. Because it finds only local minima we choose the parameter sets randomly within a wide range, and follow the Monte-Carlo approach. For the MEP model we have $\beta_0 = [10^{-8},10^{-5}]$, $\theta_0\in [25,45]$ and $W_0\in[40,200]$ which correspond to a conservatively wide range of parameters according to \citet{2019PDU....24..278A}. For NFW we have $R_N\in[10^{1},10^{4}],$ and $\rho_N = [10^{-4},10^{-1}]$. For the DC14 model we choose the same ranges as for the NFW model and, according to \citet{2017MNRAS.466.1648K}, we may bound the initial values of the additional parameter to $X\in[-3.75,-1.3]$. These boundaries apply only for the initial values and reflect astrophysical (realistic) values. %However, they are no restrictions for the best-fits because the fitting algorithm may cross the boundaries.
-
-%Following \citet{1992A&A...258..223I,2015MNRAS.451..622R}, a self-gravitating system composed of massive fermions in spherical symmetry is considered. We solve the Einstein equation for a thermal and semi-degenerate fermionic gas considered as a perfect fluid in hydrostatic equilibrium. No additional interaction is assumed for the fermions besides their fulfilling of quantum statistics and the relativistic gravitational equation. The static metric given in the standard form is \begin{equation}
-%	\label{eqn:rel:metric}
-%	g_{\mu\nu}=\diag(\e^{\nu(r)},-\e^{\lambda(r)},-r^2,-r^2\sin^2\vartheta)
-%\end{equation} where $\nu(r)$ and $\lambda(r)$ depend only on the radial coordinate $r$. For this metric the circular velocity is simply given by \begin{equation}
-%	\label{eqn:rel:velocity}
-%	\frac{v^2(r)}{c^2} = \frac12 \diff{\nu}{\ln[r/R]}
-%\end{equation} In next, we assume that the stress tensor is described by a perfect fluid in equilibrium. According to this TOV (Tolman-Oppenheimer-Volkoff) approach the metric potential $\nu(r)$ is described by the important relation\begin{equation}
-%	\label{eqn:rel:solution-nu-A}
-%	\diff{\nu}{r/R} = \DEFradius[-2] \qbracket{\DEFmass + \DEFradius[3]\DEFpressure} \qbracket[{\DEFradius[3]}]{1 - \DEFradius[-1]\DEFmass}^{-1}
-%\end{equation} The enveloped mass within a given radius $r$, which we call hereafter simply the mass $M(r)$, is given by \begin{equation}
-%	\label{eqn:rel:mass}
-%	\diff{}{r/R} \DEFmass	= \DEFradius[2] \DEFdensity
-%\end{equation} Further, mass density and pressure are represented in terms of statistical physics \citep{shapiro_black_2008}, \begin{align}
-%	\DEFdensity		&= \frac{4}{\sqrt{\pi}} \int_1^\infty\epsilon^2 \sqrt{\epsilon^2 - 1} f(r,\epsilon) \d\epsilon\\
-%	\DEFpressure	&= \frac{4}{3\sqrt{\pi}} \int_1^\infty (\epsilon^2 - 1)^{3/2} f(r,\epsilon) \d\epsilon
-%\end{align} where $\epsilon^2 = 1 - p^2/mc^2$ describes the particle energy with rest mass (in units of $m c^2$) and $f(r,\epsilon)$ is a phase space distribution function. Here, we introduced the scaling factors $R,M$ and $\SCLdensity$ related by \begin{align}
-%	\label{eqn:rel:radius-scale}
-%	\frac{R}{l_\supPlanck} &= g^{-1/2} \pi^{1/4} \frac{m_\supPlanck^2}{m^2}\\
-%	\label{eqn:rel:mass-scale}
-%	\frac{M}{m_\supPlanck} &= \frac12 g^{-1/2} \pi^{1/4} \frac{m_\supPlanck^2}{m^2}\\
-%	\frac{\SCLdensity}{\rho_\supPlanck} &= \frac18 g \pi^{-3/2} \frac{m^4}{m_\supPlanck^4}
-%\end{align} with the Planck scales for mass ($m_\supPlanck$), length, ($l_\supPlanck$) and density ($\rho_\supPlanck = m_\supPlanck/l_\supPlanck^3$). For mass and length we may use the equivalent relation $2GM/R = c^2$ where $G$ is the gravitational constant and $c$ is the speed of light. $m$ is the particle mass and $g$ is the particle degeneracy. For fermions we have $g=2$.
-
-%In order to solve the metric potential \eqref{eqn:rel:solution-nu-A} we consider the Fermi-Dirac distribution with cutoff, \begin{equation}
-%	\label{eqn:king-df}
-%	f(r,\epsilon) = \qbracket{1 - \e^{\qbracket{\epsilon - \varepsilon(r)}/\beta(r)}}\qbracket{\e^{\qbracket{\epsilon - \alpha(r)}/\beta(r)} + 1}^{-1}
-%\end{equation} for $\epsilon \leq \varepsilon(r)$. Here, $\beta(r) = k_B T(r)/m c^2$ is the temperature parameter, $\alpha(r)$ describes the chemical potential (with rest mass) and $\varepsilon(r)$ we call the cutoff energy (with rest mass). All three parameters are related with the metric potential through the Tolman relation \citep{1930PhRv...36.1791T}, the Klein relation \citep{1949RvMP...21..531K} and the conservation of energy \citep{1989A&A...221....4M}. In detail, \begin{align}
-%      \diff{\ln \beta(r)}{r/R}
-%		= \diff{\ln \alpha(r)}{r/R}
-%    = \diff{\ln \varepsilon(r)}{r/R}
-%    = -\frac12 \diff{\nu}{r/R}
-%\end{align} In next, it is convenient to introduce the degeneracy parameter $\theta(r)$ and the cutoff parameter $W(r)$ defined by \begin{align}
-%	\theta(r)	&= \frac{\mu(r)}{k_B T(r)}\\
-%	W(r) 			&= \frac{E_c(r)}{k_B T(r)}
-%\end{align} where $E_c(r)$ is the classical particle escape energy \citep{1966AJ.....71...64K}.
-
-%Chemical potential and cutoff energy become then $\alpha(r) = 1 + \beta(r) \theta(r)$ and $\varepsilon(r) = 1 + \beta(r) W(r)$. Here, $\mu(r)$ is the chemical potential (with rest mass subtracted), $T(r)$ is the temperature and $k_B$ is the Boltzmann constant.
-
-%Note that a distribution function of the kind of \cref{eqn:king-df} can be obtained as a (quasi) stationary solution of a generalized Fokker-Planck equation for fermions including the physics of violent relaxation and evaporation, appropriate to treat non-linear galactic DM halo structure formation \citep{2004PhyA..332...89C}. 
-
-%Finally, the metric potential is solved numerically with the initial condition \begin{equation}
-%	M(0)			= 0,\quad
-%	\beta(0)	= \beta_0,\quad
-%	\theta(0)	= \theta_0,\quad
-%	W(0)			= W_0
-%\end{equation} Besides those configuration parameters ($\beta_0,\theta_0, W_0$) the RAR model is described also by the particle mass $m$, which is necessary to provide right physical properties for the obtained configurations.
+The density profiles in the fermionic model can develop a rich morphological behaviour: while the halo region is King-like (i.e. from polytropic-like with $W_p \ll 1$ to power law-like with $W_p \gtrsim 10$, see \ref{sec:morph}), the inner region can either develop a \textit{dense core} at the center of such a halo (i.e. for large central degeneracy $\theta_0 > 10$), or not (i.e. $\theta_0 \ll -1$ in the dilute regime). Both kind of family profiles are thermodynamically and dynamically stable as well as long lived in a cosmological framework, as recently demonstrated in \citet{2021MNRAS.502.4227A}, for typical galaxies with total masses of the order $\sim 5\times 10^{10} M_\odot$. Remarkably, for \textit{core} - \textit{halo} RAR solutions with fermion masses of $m c^2\approx \SI{50}{\kilo\eV}$, the degenerate and compact DM cores may work as an alternative to the BH paradigm at the center of non-active galaxies \citep{2018PDU....21...82A,2019PDU....24..278A,2020A&A...641A..34B,2021MNRAS.505L..64B,2022MNRAS.511L..35A}. Furthermore, their eventual gravitational core-collapse in larger galaxies may offer a novel supermassive BH formation mechanism from DM \citep{2021MNRAS.502.4227A}.
