@@ -1,12 +1,11 @@
 \documentclass[twocolumn,twocolappendix,linenumbers]{aastex631}
-\input{packages.tex}
-\input{macros.tex}
-\input{style.tex}
-\input{symbols.tex}
-\input{meta.tex}
+\input{config}
+\input{macros}
+\input{symbols}
+\input{meta}
 
 \begin{document}
-  
+
 \input{content/title.tex}
 \input{content/abstract.tex}
 
@@ -16,6 +15,7 @@
 \input{content/fitting}
 \input{content/dark_matter_models}
 \input{content/result}
+\input{content/fermionic_halos}
 \input{content/conclusion}
 
 \begin{acknowledgments}
@@ -23,9 +23,8 @@
 \end{acknowledgments}
 
 \appendix
-\input{content/parameter_distributions}
 \input{content/parameter_correlations}
-
+\input{content/parameter_distributions}
 
 \bibliographystyle{aasjournal}
 \bibliography{bib-articles,bib-books}
